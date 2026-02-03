@@ -1,0 +1,41 @@
+using third variable
+
+public class Main {
+    
+    public static void main(String[] args) {
+        
+        int a = 5;
+        int b = 10;
+        
+        int c;
+        
+        c = a;  // c = 5 (store a)
+        a = b;  // a = 10
+        b = c;  // b = 5 (restore old a)
+        
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}
+
+
+
+------------------------------------------------------
+without using third variable
+
+
+public class Main {
+    
+    public static void main(String[] args) {
+        
+        int a = 5;
+        int b = 10;
+
+        a = a + b; // a = 15
+        b = a - b; // b = 5
+        a = a - b; // a = 10
+
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+}

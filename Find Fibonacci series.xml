@@ -1,0 +1,53 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        int num = 7;
+
+        int first = 0;
+        int sec = 1;
+
+        System.out.println(first);
+        System.out.println(sec);
+
+        for (int i = 2; i < num; i++) {
+            int third = first + sec;
+            System.out.println(third);
+
+            first = sec;
+            sec = third;
+        }
+    }
+}
+
+
+-------------------------------------------------------------
+using while loop
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int num = 7;
+
+        int first = 0;
+        int sec = 1;
+
+        System.out.println(first);
+        System.out.println(sec);
+
+        int i = 2; // because already printed 2 numbers
+
+        while (i < num) {
+
+            int third = first + sec;
+            System.out.println(third);
+
+            first = sec;
+            sec = third;
+
+            i++;   // increment loop counter
+        }
+    }
+}

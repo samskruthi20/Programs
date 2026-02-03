@@ -1,0 +1,32 @@
+class Main {
+    public static void main(String[] args) {
+        
+       int[] a = {1, 2, 3, 2, 1};
+        boolean isPalindrome=true;
+        
+        int first=0;
+        int last = a.length-1;
+        
+        while(first<last){
+            
+            if(a[first] != a[last]){
+                
+                isPalindrome=false;
+                break;
+            }
+            
+            first++;
+            last--;
+        }
+        
+        if(isPalindrome){
+            
+            System.out.println("array is palindrome");
+        }
+        
+        else{
+            
+            System.out.println("array is not palindrome");
+        }
+    }
+}

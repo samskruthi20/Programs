@@ -1,0 +1,51 @@
+import java.util.LinkedHashSet;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        String s = "proGramMing";
+        String k = s.toLowerCase();
+
+        LinkedHashSet<Character> set = new LinkedHashSet<Character>();
+
+        for (int i = 0; i < k.length(); i++) {
+            char c = k.charAt(i);
+            set.add(c);
+        }
+
+        for (char c : set) {
+            System.out.print(c);
+        }
+    }
+}
+
+
+
+
+----------------------------------------------------------------------
+using StringBuilder
+
+import java.util.LinkedHashSet;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        String s = "proGramMing";
+        String k = s.toLowerCase();
+
+        LinkedHashSet<Character> set = new LinkedHashSet<>();
+
+        for (int i = 0; i < k.length(); i++) {
+            set.add(k.charAt(i));
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (char c : set) {
+            sb.append(c);
+        }
+
+        System.out.println(sb.toString());
+    }
+}

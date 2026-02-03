@@ -1,0 +1,23 @@
+class Main {
+    public static void main(String[] args) {
+        
+       int[] a = {1,2,3,4,8,9,0};
+        
+        int middle = (a.length/2)+1;
+        int last = a.length-1;
+        
+        while(middle<last){
+            int temp=a[middle];
+            a[middle]=a[last];
+            a[last]=temp;
+            
+            middle++;
+            last--;
+        }
+        
+        for(int num : a ){
+            
+            System.out.print(num + " ");
+        }
+    }
+}

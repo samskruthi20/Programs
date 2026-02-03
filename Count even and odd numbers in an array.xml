@@ -1,0 +1,33 @@
+package Programming;
+import java.util.ArrayList;
+
+public class arrayEvenOdd {
+
+	public static void main(String[] args) {
+		
+		int[] a = {1,2,3,6,3,2,8};
+		ArrayList<Integer> even = new ArrayList<Integer>();
+		ArrayList<Integer> odd = new ArrayList<Integer>();
+		int evenCount = 0;
+		int oddCount = 0;
+		
+		for(int i=0; i<a.length; i++) {
+			
+			if(a[i]%2 == 0) {
+				
+				even.add(a[i]);
+				evenCount++;
+			}
+			
+			else
+				
+				odd.add(a[i]);
+			    oddCount++;
+			
+		}
+		
+		System.out.println(even + " are even numbers" + " + count is " + evenCount);
+		System.out.println(odd + " are even numbers" + " + count is " + oddCount);
+	}
+
+}

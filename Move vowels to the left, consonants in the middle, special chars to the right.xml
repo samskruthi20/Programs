@@ -1,0 +1,72 @@
+Move vowels to the left, consonants in the middle, special chars to the right
+
+public class ArrangeCharacters {
+    public static void main(String[] args) {
+
+        String input = "aB#cdE!f2o";
+        String vowels = "";
+        String consonants = "";
+        String special = "";
+
+        // Simple for loop instead of for-each
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+
+            if ("aeiouAEIOU".indexOf(c) != -1) {
+                vowels = vowels + c;          // Add vowels to left
+            }
+            else if (Character.isLetter(c)) {
+                consonants = consonants + c;  // Add consonants to middle
+            }
+            else {
+                special = special + c;        // Add special chars to right
+            }
+        }
+
+        String result = vowels + consonants + special;
+        System.out.println(result);
+    }
+}
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+class Main {
+    public static void main(String[] args) {
+        
+   String s = "73HGYnhd#%^FFSkoi";
+   String k = s.toLowerCase();
+   
+   StringBuilder sv = new StringBuilder();
+   StringBuilder sc = new StringBuilder();
+   StringBuilder ss = new StringBuilder();
+   
+   for(int i=0; i<k.length(); i++){
+       
+       char c = k.charAt(i);
+       
+       if(!(c>='0' && c<='9')){
+           
+           if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'){
+               
+               sv.append(c);
+           }
+           
+           else if(Character.isLetter(c)){
+               
+               sc.append(c);
+           }
+           
+           else{
+               
+               ss.append(c);
+           }
+       }
+   }
+   
+   System.out.println(sv.toString()+sc.toString()+ss.toString());
+    }
+}

@@ -1,0 +1,65 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        int num = 371;
+
+        int rem;
+        int result = 0;
+        int original = num;
+
+        while (num != 0) {
+            rem = num % 10;
+            result = result + (rem * rem * rem);  // cube of each digit
+            num = num / 10;
+        }
+
+        if (result == original) {
+            System.out.println("Number is Armstrong");
+        } else {
+            System.out.println("Number is not Armstrong");
+        }
+    }
+}
+
+
+
+-----------------------------------------------------------------------------
+General program
+
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int num = 9474;
+        int rem;
+        int result = 0;
+        int original = num;
+
+        int temp = num;
+        int count = 0;
+
+        // Count digits
+        while (temp != 0) {
+            count++;
+            temp = temp / 10;
+        }
+
+        // Armstrong calculation
+        while (num != 0) {
+            rem = num % 10;
+            result = result + (int) Math.pow(rem, count);
+            num = num / 10;
+        }
+
+        System.out.println("Digit Count: " + count);
+
+        if (original == result) {
+            System.out.println(original + " is an Armstrong number");
+        } else {
+            System.out.println(original + " is not an Armstrong number");
+        }
+    }
+}

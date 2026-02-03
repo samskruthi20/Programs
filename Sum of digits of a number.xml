@@ -1,0 +1,18 @@
+public class Main {
+    
+    public static void main(String [] args){
+
+        int num = 123;
+        int rem;
+        int result = 0;
+
+        while(num != 0){
+
+            rem = num % 10;     // extract last digit
+            result = result + rem;
+            num = num / 10;     // remove last digit
+        }
+
+        System.out.println(result);
+    }
+}

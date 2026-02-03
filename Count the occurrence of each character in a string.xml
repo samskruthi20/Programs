@@ -1,0 +1,55 @@
+import java.util.HashMap;
+import java.util.Map;
+class Main {
+    public static void main(String[] args) {
+     
+     String s = "HGAUhaiugKIuH86%4380";
+     
+   HashMap<Character,Integer> map = new HashMap<>();
+   
+   if(s == null || s.length()==0){
+       
+       System.out.println("given input is invalid");
+       return;
+       
+   }
+     
+     
+     String k=s.toLowerCase();
+     
+     for(int i=0; i<k.length(); i++){
+         
+         char c = k.charAt(i);
+         
+         if(c>='a' && c<='z'){
+             
+         
+         if(map.containsKey(c)){
+             
+             map.put(c, map.get(c)+1);
+         }
+         
+         else{
+             
+             map.put(c,1);
+         }
+     }}
+     
+     char maxChar = ' ';
+     int maxCount = 0;
+     
+     for(Map.Entry<Character,Integer> entry : map.entrySet()){
+         
+         System.out.println(entry.getKey() + " : " + entry.getValue());
+         
+         if(entry.getValue()>maxCount){
+             
+             maxCount = entry.getValue();
+             maxChar = entry.getKey();
+         }
+     }
+     
+     System.out.println("Frequency = " + maxChar + " : " +maxCount);
+     
+    }
+}
