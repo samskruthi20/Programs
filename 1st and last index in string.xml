@@ -1,7 +1,7 @@
 class Main {
     public static void main(String[] args) {
        
-         String variable = "Amazon";
+         String variable = "FlipKart";
 
 //Can use StringBuilder but no need
         System.out.println("First occurrence of a: " + s.indexOf('a'));
